@@ -1,0 +1,77 @@
+# your code goes here
+def search(a):
+    """Returns the index of 'a' in the 2D matrix as a list of tuples"""
+    index[:] = []
+    for rows, col in enumerate(mat):
+        try:
+            column = 0
+            while column < len(col):
+                if a == col[column]:
+                    index.append((rows, column))
+                column += 1
+        except ValueError:  # try is used because if its not present in first row it should continue searching in second row
+            continue
+    return index
+ 
+def median_check(x, y, a, k, l, n, m):
+    """ With the starting value x,y it checks the equalizer matrix k*l in 2D marix n*m and checks whether a is median or not"""
+    tmp_list[:] = []
+    # This block will contain start of the traversal through matrix
+    if x-k+1<=0 and y-l+1<=0:
+    	stx,sty = 0,0
+    elif x-k+1>0 and y-l+1>0:
+    	stx,sty = x-k+1,y-l+1
+    elif x-k+1<=0 and y-l+1>0:
+    	stx,sty = 0,y-l+1
+    else:
+    	stx,sty = x-k+1,0
+    # This block will contain the end of the traversal through matrix
+    if x+k-1>=n and y+l-1>=m:
+    	endx,endy = n-1,m-1
+    elif x+k-1<n and y+l-1<m:
+    	endx,endy = x+k-1,y+l-1
+    elif x+k-1<n and y+l-1>=m:
+    	endx,endy = x+k-1,m-1
+    else:
+    	endx,endy = n-1,y+l-1
+    #iterate through the matrix with start and end points for as much k*l as possible to find the median 
+    rchk = 0
+    for r in range(stx,endx+1):
+    	if rchk <= 
+    	
+    
+    
+    
+    # for i in range(x, x + k):
+    #     for j in range(y, y + l):
+    #     	tmp_list.append(mat[i][j])
+    #     tmp_list.sort()
+    #     if a == tmp_list[int(len(tmp_list) / 2)]:
+    #     	return a	
+        
+ 
+ 
+def result():
+    """This will return the largest median value after applying the equalizer"""
+    for itr2 in num:
+        tmp = search(itr2)
+        # print(tmp,itr2)
+        for x, y in tmp:
+            # print(x,y)
+            ans = median_check(x, y, itr2, k, l, n, m)
+            if ans is not None:
+                return ans
+ 
+n, m, q = map(int, input().split())
+mat = [[int(h) for h in input().split()] for lines in range(n)]
+num = []
+tmp_list = []
+index = []
+for i in mat:
+    num += i
+num = list(set(num))
+num.sort(reverse=True)
+# print(num)
+for itr in range(q):
+    k, l = map(int, input().split())
+    print(result())
