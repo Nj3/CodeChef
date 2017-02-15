@@ -1,2 +1,2 @@
-# CodeChef
-Contains practice problems
+# CompetitiveSites
+Contains practice problems for codechef, projecteuler
