@@ -10,6 +10,6 @@ while 1:
     fibo.append(sm)
     prev = curr
     curr = sm
-print(fibo)
+#print(fibo)
 fibo = [i for i in fibo if i%2==0]
 print(sum(fibo))

@@ -5,5 +5,5 @@ for i in range(100,1000):
         if prod[::] == prod[::-1]:
             val.append(int(prod))
 val.sort(reverse = True)
-print(val)
+#print(val)
 print(val[0])

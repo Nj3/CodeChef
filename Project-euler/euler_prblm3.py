@@ -1,6 +1,6 @@
 import math
 
-n = 8
+n = 600851475143
 while n % 2 == 0:
     n /= 2
     if n == 1:
