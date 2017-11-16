@@ -1,2 +1,2 @@
 # CompetitiveSites
-Contains practice problems for codechef, projecteuler and HackerRank.
+Contains practice problems for projecteuler and HackerRank.
